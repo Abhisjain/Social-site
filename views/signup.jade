@@ -1,0 +1,18 @@
+extends layout
+
+block _signup
+	div#signup-container
+		h1 Register
+		ul
+			li
+				input(type="email",placeholder="E-mail",required="")
+			li
+				input(type="text",placeholder="Username",required="")
+			li 
+				input(type="password",placeholder="Password",required="")
+			li
+				input(type="password",placeholder="Confirm Password",required="")
+			li
+				input(type="submit",value="Register" onclick = "signup();")
+		ul#error
+

@@ -1,0 +1,43 @@
+extends layout
+
+block _header
+	div#navigation-bar
+		div#logo-name
+			img(src="/images/logo.png")
+			span gdNET
+		div#middle-menu
+			ul
+				li about us
+				li check
+				li check
+block _body
+	div#main_body
+		div#text
+			p(onclick="foo()").
+				Collaborate with game developers.
+		div#login-form
+			h1 Login
+			div#form-login
+				ul
+					li
+						input(type="text",placeholder="Username")			
+					li
+						input(type="password",placeholder="Password")
+					li
+						input(type="submit",value="Log in",onclick="login()")
+					li
+						span#forgot-text(onclick="makeVisible()") Forgot Password?
+					li
+						a(href="/signup") Register
+block _forgot
+	div#forgot-container
+	div#forgot
+		h4#changethis Enter your email id
+		span(onclick="reset()") close
+		form
+			ul
+				li
+					input#email(type="email",placeholder="email",name="email")
+		button(onclick="response()") OK
+
+
